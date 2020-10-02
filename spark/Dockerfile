@@ -36,7 +36,7 @@ RUN mkdir -p /opt && \
     echo Hadoop ${hadoop_ver} native libraries installed in /opt/hadoop/lib/native
 
 # Get Spark from US Apache mirror.
-RUN mkdir -p /opt && \
+RUN mkdir -p /opt/spark/lib && \
     cd /opt && \
     curl -k https://downloads.apache.org/spark/spark-${spark_ver}/spark-${spark_ver}-bin-hadoop2.6.tgz | \
         tar -zx && \
